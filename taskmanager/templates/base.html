@@ -7,7 +7,7 @@
     <title>Task Manager</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}" class="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="">New Task</a></li>
-                <li><a href="">Categories</a></li>
+                <li><a href="{{ url_for('categories') }}">Categories</a></li>
               </ul>
             </div>
           </nav>
@@ -27,7 +27,7 @@
           <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
-            <li><a href="">Categories</a></li>
+            <li><a href="{{ url_for('categories') }}">Categories</a></li>
           </ul>
     </header>
 
@@ -37,14 +37,16 @@
     </div>
 
     <footer class="page-footer blue darken-3">
-        <div class="footer-copyright">
+      <div class="footer-copyright">
           <div class="container">
-          For educational purposes only
+              For educational purposes only
+              <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
           </div>
-        </div>
-      </footer>
+      </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-    <script src="{{ url_for('static', filename='js/script.css')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 </html>

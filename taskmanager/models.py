@@ -11,6 +11,7 @@ class Category(db.Model):
         # __repr__ to represent itself in the form of a string
         return self.category_name
 
+
 class Task(db.Model):
     # schema for the category model
     id = db.Column(db.Integer, primary_key=True)
