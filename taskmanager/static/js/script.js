@@ -13,4 +13,7 @@ M.Datepicker.init(datepicker, {
 let selects = document.querySelectorAll('select');
 M.FormSelect.init(selects);
 
-  });
+
+let task = document.querySelectorAll('.collapsible');
+M.Collapsible.init(task);
+});
